@@ -19,19 +19,20 @@ export default function Hero() {
         <div className="absolute inset-0 bg-uk-navy/80" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center py-24">
-          
-          
+
+
           <h1 className="text-4xl md:text-6xl font-bold leading-tight text-uk-white mb-6">
             Speak English with confidence — from the comfort of your{" "}
             <span className="text-uk-red">home or office.</span>
           </h1>
-          
+
           <p className="text-lg md:text-xl text-grey-200 mb-10 max-w-2xl mx-auto">
-            Personalized lessons with an experienced tutor who has
-            taught students across Asia, Europe, South America, and Africa.
-            Speaking, listening, reading, writing, grammar, and vocabulary.
+            Personalized lessons with an experienced tutor who has taught students
+            across Asia, Europe, South America, and Africa. Speaking, listening,
+            reading, writing, grammar, and vocabulary — including IELTS & TOEFL
+            preparation.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="/contact"
@@ -46,7 +47,7 @@ export default function Hero() {
               Explore Services
             </Link>
           </div>
-        
+
         </div>
       </section>
 

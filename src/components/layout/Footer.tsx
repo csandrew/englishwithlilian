@@ -2,10 +2,10 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-import { 
-  faLinkedin, 
-  faWhatsapp, 
-  faInstagram 
+import {
+  faLinkedin,
+  faWhatsapp,
+  faInstagram
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
@@ -19,19 +19,19 @@ export default function Footer() {
 
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
-          
+
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-flex flex-col mb-6">
               <span className="text-2xl font-bold text-uk-white tracking-tight">
                 English With Lilian
               </span>
-              
+
             </Link>
             <p className="text-grey-400 text-sm leading-relaxed max-w-sm mb-8">
-              Personalized English lessons. Helping ambitious learners across Asia, Europe, South America, and Africa speak with confidence.
+              Personalized English lessons. Helping ambitious learners across Asia, Europe, South America, and Africa speak with confidence — including IELTS & TOEFL preparation.
             </p>
-            
+
             {/* Social Icons */}
             <div className="flex gap-4">
               <a href="#" aria-label="LinkedIn" className="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 text-grey-300 hover:bg-uk-red hover:text-white transition-all duration-300">
@@ -51,11 +51,11 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               {['Home', 'About', 'Services', 'Testimonials', 'FAQ'].map((item) => (
                 <li key={item}>
-                  <Link 
-                    href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 
+                  <Link
+                    href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
                     className="text-grey-400 hover:text-uk-white transition-colors flex items-center gap-2 group"
                   >
-                    
+
                     {item}
                   </Link>
                 </li>
@@ -83,7 +83,7 @@ export default function Footer() {
                   </span>
                 </a>
               </li>
-              
+
               <li>
                 <a
                   href="https://wa.me/254722388160"
@@ -100,7 +100,7 @@ export default function Footer() {
                   </span>
                 </a>
               </li>
-              
+
               <li>
                 <a
                   href="mailto:hello@example.com"
