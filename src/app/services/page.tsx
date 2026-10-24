@@ -1,10 +1,10 @@
+// src/app/services/page.tsx
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBookOpen,
   faBriefcase,
   faCheck,
-  faComments,
   faGraduationCap,
   faMicrophone,
 } from "@fortawesome/free-solid-svg-icons";
@@ -30,17 +30,6 @@ const services = [
       "Organise ideas clearly in writing",
       "Build reading comprehension",
       "Expand useful vocabulary",
-    ],
-  },
-  {
-    title: "Everyday English",
-    icon: faComments,
-    description:
-      "Build confidence for everyday conversations, travel, and the situations where you want to express yourself naturally.",
-    details: [
-      "Practise real conversations",
-      "Grow useful vocabulary",
-      "Speak with more confidence",
     ],
   },
   {
@@ -71,40 +60,45 @@ export default function ServicesPage() {
   return (
     <>
       <section className="bg-uk-navy px-4 py-16 text-center text-uk-white">
-        <h1 className="mb-2 text-gray-100 text-4xl font-bold">English Lessons for Your Goals</h1>
-        <p className="mx-auto max-w-2xl text-uk-navy-light">
+        <h1 className="mb-2 text-4xl font-bold text-white">English Lessons for Your Goals</h1>
+        {/* FIXED: Changed text-uk-navy-light to text-grey-300 since the light navy shade doesn't exist in your theme */}
+        <p className="mx-auto max-w-2xl text-grey-300">
           Personalised one-to-one lessons focused on the English you want to use
           in real life.
         </p>
       </section>
 
       <section className="bg-uk-white px-4 py-16">
-        <div className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 xl:grid-cols-3">
+        {/* 
+          FIXED: Changed to grid-cols-2 for mobile. 
+          Also added smaller padding (p-5) and gap (gap-4) on mobile.
+        */}
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 sm:gap-8 xl:grid-cols-3">
           {services.map((service) => (
             <article
               key={service.title}
-              className="rounded-2xl border border-grey-200 bg-grey-50 p-8"
+              className="rounded-2xl border border-grey-200 bg-grey-50 p-5 sm:p-8 flex flex-col h-full"
             >
               <FontAwesomeIcon
                 icon={service.icon}
                 aria-hidden="true"
-                className="mb-4 text-3xl text-uk-red"
+                className="mb-4 text-2xl sm:text-3xl text-uk-red"
               />
-              <h2 className="mb-3 text-xl font-bold text-grey-900">
+              <h2 className="mb-3 text-lg sm:text-xl font-bold text-grey-900">
                 {service.title}
               </h2>
-              <p className="mb-6 leading-relaxed text-grey-600">
+              <p className="mb-6 text-sm leading-relaxed text-grey-600">
                 {service.description}
               </p>
-              <ul className="space-y-2 text-sm text-grey-700">
+              <ul className="space-y-2 text-sm text-grey-700 mt-auto">
                 {service.details.map((detail) => (
-                  <li key={detail} className="flex items-center gap-2">
+                  <li key={detail} className="flex items-start gap-2">
                     <FontAwesomeIcon
                       icon={faCheck}
                       aria-hidden="true"
-                      className="text-uk-red"
+                      className="text-uk-red mt-1 shrink-0"
                     />
-                    {detail}
+                    <span>{detail}</span>
                   </li>
                 ))}
               </ul>
@@ -124,7 +118,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block rounded-md bg-uk-red px-8 py-3.5 font-semibold text-uk-white transition-colors hover:bg-uk-red-dark"
+            className="inline-block rounded-md bg-uk-red px-8 py-3.5 font-semibold text-uk-white transition-colors hover:bg-uk-red/90"
           >
             Book a Free Consultation
           </Link>

@@ -13,13 +13,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-  title: "About Lilian Isindu | English With Lilian",
+  title: "About Lilian | English With Lilian",
   description:
-    "Meet Lilian Isindu — 15 years teaching English as a foreign language to students across Asia, Europe, South America, and Africa.",
+    "Meet Lilian Isindu — 15+ years teaching English as a foreign language to students across Asia, Europe, South America, and Africa.",
 };
 
 const approach = [
-  { value: "15", label: "Years teaching" },
+  { value: "15+", label: "Years teaching" },
   { value: "4", label: "Continents" },
   { value: "1:1", label: "Personal lessons" },
 ];
@@ -30,8 +30,8 @@ export default function AboutPage() {
       {/* Page header */}
       <section className="bg-uk-navy py-16 text-center text-uk-white">
         <div className="container-custom">
-          <h1 className="mb-2 text-gray-100 text-4xl font-bold">About Lilian Isindu</h1>
-          <p className="text-grey-300">15 years of helping learners speak English with confidence</p>
+          <h1 className="mb-2 text-gray-100 text-4xl font-bold">My Story</h1>
+          <p className="text-grey-300">15 years of helping learners excel in speaking English with confidence</p>
         </div>
       </section>
 
@@ -39,8 +39,8 @@ export default function AboutPage() {
       <section className="bg-uk-white py-20">
         <div className="container-custom grid items-center gap-12 md:grid-cols-2">
           <Image
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
-            alt="Lilian Isindu, English tutor"
+            src="/images/about-image.jpg"
+            alt="Lilian, English tutor"
             className="w-full rounded-2xl shadow-lg"
             width={800}
             height={1000}
@@ -104,7 +104,7 @@ export default function AboutPage() {
             see the fastest improvement.
           </p>
 
-          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-6 grid-cols-2 xl:grid-cols-3">
             {[
               { icon: faComments, title: "Speaking & Listening", desc: "Feel confident in real conversations. Understand fast, natural English." },
               { icon: faBookOpen, title: "Reading", desc: "Read fluently and understand written English with confidence." },

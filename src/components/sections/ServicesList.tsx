@@ -1,8 +1,8 @@
+// src/components/sections/ServicesList.tsx
 import {
   faArrowRightLong,
   faBookOpen,
   faBriefcase,
-  faComments,
   faGraduationCap,
   faMicrophone,
 } from "@fortawesome/free-solid-svg-icons";
@@ -10,12 +10,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
 const services = [
-  {
-    title: "Everyday English",
-    icon: faComments,
-    description:
-      "Speak naturally about daily life and hold real conversations with confidence.",
-  },
   {
     title: "Professional English",
     icon: faBriefcase,
@@ -53,24 +47,28 @@ export default function ServicesList() {
           Choose an area that matches your goal — or combine a few.
         </p>
 
-        <div className="grid gap-8 text-left sm:grid-cols-2 xl:grid-cols-3">
+        {/* 
+          FIXED: Changed to grid-cols-2 so it's always 2 columns on mobile.
+          Also added smaller padding (p-5) on mobile, expanding to p-8 on larger screens.
+        */}
+        <div className="grid grid-cols-2 gap-4 sm:gap-8 text-left xl:grid-cols-3">
           {services.map((service) => (
             <article
               key={service.title}
-              className="rounded-2xl border border-grey-200 bg-grey-50 p-8 transition-shadow hover:shadow-md"
+              className="rounded-2xl border border-grey-200 bg-grey-50 p-5 sm:p-8 transition-shadow hover:shadow-md flex flex-col h-full"
             >
               <FontAwesomeIcon
                 icon={service.icon}
                 aria-hidden="true"
                 className="mb-4 text-2xl text-uk-red"
               />
-              <h3 className="mb-3 text-xl font-bold">{service.title}</h3>
-              <p className="mb-6 text-sm text-grey-600">
+              <h3 className="mb-3 text-lg sm:text-xl font-bold">{service.title}</h3>
+              <p className="mb-6 text-sm text-grey-600 grow">
                 {service.description}
               </p>
               <Link
                 href="/services"
-                className="text-sm font-semibold text-uk-red hover:underline"
+                className="text-sm font-semibold text-uk-red hover:underline mt-auto"
               >
                 Learn More{" "}
                 <FontAwesomeIcon icon={faArrowRightLong} aria-hidden="true" />

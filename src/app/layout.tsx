@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     "British English tutor",
   ],
   openGraph: {
-    title: "English With Lilian | Online English Tutor",
+    title: "English With Lilian | English Tutor",
     description:
-      "15 years helping learners speak English with confidence. Personalized 1:1 online lessons.",
+      "15+ years helping learners speak English with confidence. Personalized 1:1 online lessons.",
     type: "website",
   },
 };

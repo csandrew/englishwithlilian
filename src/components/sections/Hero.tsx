@@ -51,7 +51,7 @@ export default function Hero() {
       </section>
 
       {/* Trust bar — real numbers */}
-      <section className="bg-uk-white border-b border-grey-200 py-8">
+      <section className="bg-gray-200 border-b border-grey-200 py-8">
         <div className="container-custom grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div>
             <span className="block text-3xl font-bold text-uk-navy">15+</span>
