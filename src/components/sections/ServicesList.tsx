@@ -1,10 +1,13 @@
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faArrowRightLong,
+  faBookOpen,
   faBriefcase,
   faComments,
+  faGraduationCap,
   faMicrophone,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 const services = [
   {
@@ -17,24 +20,40 @@ const services = [
     title: "Professional English",
     icon: faBriefcase,
     description:
-      "Meetings, emails, presentations, and interviews in international workplaces.",
+      "Practise meetings, emails, presentations, and interviews for international workplaces.",
   },
   {
     title: "Pronunciation",
     icon: faMicrophone,
     description:
-      "Speak clearly the first time. Fix the sounds that make people ask you to repeat.",
+      "Speak clearly and confidently, and help others understand you the first time.",
+  },
+  {
+    title: "IELTS & TOEFL Prep",
+    icon: faGraduationCap,
+    description:
+      "Prepare for the reading, writing, listening, and speaking sections of your exam.",
+  },
+  {
+    title: "Reading & Writing",
+    icon: faBookOpen,
+    description:
+      "Read fluently, write clearly, and organise your ideas with confidence.",
   },
 ];
 
 export default function ServicesList() {
   return (
-    <section className="py-20 bg-uk-white">
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold text-grey-900 mb-3">What are your learning goals?</h2>
-        <p className="text-grey-600 mb-12">Pick the area that matches your goal — or mix them</p>
-        
-        <div className="grid gap-8 text-left md:grid-cols-3">
+    <section className="bg-uk-white py-20">
+      <div className="mx-auto max-w-6xl px-4 text-center">
+        <h2 className="mb-3 text-3xl font-bold text-grey-900">
+          What are your learning goals?
+        </h2>
+        <p className="mb-12 text-grey-600">
+          Choose an area that matches your goal — or combine a few.
+        </p>
+
+        <div className="grid gap-8 text-left sm:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
             <article
               key={service.title}
@@ -46,12 +65,15 @@ export default function ServicesList() {
                 className="mb-4 text-2xl text-uk-red"
               />
               <h3 className="mb-3 text-xl font-bold">{service.title}</h3>
-              <p className="mb-6 text-sm text-grey-600">{service.description}</p>
+              <p className="mb-6 text-sm text-grey-600">
+                {service.description}
+              </p>
               <Link
                 href="/services"
                 className="text-sm font-semibold text-uk-red hover:underline"
               >
-                Learn More <span aria-hidden="true">&rarr;</span>
+                Learn More{" "}
+                <FontAwesomeIcon icon={faArrowRightLong} aria-hidden="true" />
               </Link>
             </article>
           ))}

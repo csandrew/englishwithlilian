@@ -39,7 +39,7 @@ export default function FAQPage() {
   return (
     <>
       <section className="bg-uk-navy px-4 py-16 text-center text-uk-white">
-        <h1 className="mb-2 text-4xl font-bold">Frequently Asked Questions</h1>
+        <h1 className="mb-2 text-gray-100 text-4xl font-bold">Frequently Asked Questions</h1>
         <p className="text-uk-navy-light">
           A few helpful details before you get started.
         </p>
@@ -68,7 +68,7 @@ export default function FAQPage() {
             Still have a question?{" "}
             <Link
               href="/contact"
-              className="font-semibold text-uk-navy hover:underline"
+              className="font-semibold text-uk-red hover:underline"
             >
               Get in touch
             </Link>

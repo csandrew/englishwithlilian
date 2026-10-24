@@ -1,13 +1,37 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faBookOpen,
   faBriefcase,
   faCheck,
   faComments,
+  faGraduationCap,
   faMicrophone,
 } from "@fortawesome/free-solid-svg-icons";
 
 const services = [
+  {
+    title: "IELTS & TOEFL Prep",
+    icon: faGraduationCap,
+    description:
+      "Prepare for the reading, writing, listening, and speaking sections of your English exam with focused practice built around your target score.",
+    details: [
+      "IELTS and TOEFL exam strategies",
+      "Reading, writing, listening, and speaking practice",
+      "Build confidence for test day",
+    ],
+  },
+  {
+    title: "Reading & Writing",
+    icon: faBookOpen,
+    description:
+      "Develop clear writing and confident reading skills for study, work, and everyday communication.",
+    details: [
+      "Organise ideas clearly in writing",
+      "Build reading comprehension",
+      "Expand useful vocabulary",
+    ],
+  },
   {
     title: "Everyday English",
     icon: faComments,
@@ -47,7 +71,7 @@ export default function ServicesPage() {
   return (
     <>
       <section className="bg-uk-navy px-4 py-16 text-center text-uk-white">
-        <h1 className="mb-2 text-4xl font-bold">English Lessons for Your Goals</h1>
+        <h1 className="mb-2 text-gray-100 text-4xl font-bold">English Lessons for Your Goals</h1>
         <p className="mx-auto max-w-2xl text-uk-navy-light">
           Personalised one-to-one lessons focused on the English you want to use
           in real life.
@@ -55,7 +79,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="bg-uk-white px-4 py-16">
-        <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
+        <div className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
             <article
               key={service.title}
@@ -89,7 +113,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-grey-50 px-4 py-16 text-center">
+      <section className="bg-grey-200 px-4 py-16 text-center">
         <div className="mx-auto max-w-2xl">
           <h2 className="mb-4 text-3xl font-bold text-grey-900">
             Lessons shaped around you
@@ -100,7 +124,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block rounded-full bg-uk-red px-8 py-3.5 font-semibold text-uk-white transition-colors hover:bg-uk-red-dark"
+            className="inline-block rounded-md bg-uk-red px-8 py-3.5 font-semibold text-uk-white transition-colors hover:bg-uk-red-dark"
           >
             Book a Free Consultation
           </Link>

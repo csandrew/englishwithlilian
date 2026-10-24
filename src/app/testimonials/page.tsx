@@ -5,7 +5,7 @@ export default function TestimonialsPage() {
   return (
     <>
       <section className="bg-uk-navy px-4 py-16 text-center text-uk-white">
-        <h1 className="mb-2 text-4xl font-bold">Student Testimonials</h1>
+        <h1 className="mb-2 text-gray-100 text-4xl font-bold">Student Testimonials</h1>
         <p className="text-uk-navy-light">
           Read what students have shared about their learning.
         </p>
@@ -17,7 +17,7 @@ export default function TestimonialsPage() {
         </h2>
         <Link
           href="/contact"
-          className="inline-block rounded-full bg-uk-red px-8 py-3.5 font-semibold text-uk-white transition-colors hover:bg-uk-red-dark"
+          className="inline-block rounded-md bg-uk-red px-8 py-3.5 font-semibold text-uk-white transition-colors hover:bg-uk-red-dark"
         >
           Book a Free Consultation
         </Link>
