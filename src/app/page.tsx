@@ -24,7 +24,7 @@ export default function Home() {
           {/* Changed to text-grey-700 for good contrast on grey-300 */}
           <p className="text-grey-700 text-lg mb-8">
             Book a free consultation. We&apos;ll talk about your goals and I&apos;ll
-            tell you honestly whether I can help.
+            tell you honestly where I can help.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             {/* Primary Button: Navy background, white text */}

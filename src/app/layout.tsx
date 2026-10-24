@@ -10,11 +10,11 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: {
-    default: "English With Lilian | Online English Tutor",
+    default: "English With Lilian | English Tutor",
     template: "%s | English With Lilian",
   },
   description:
-    "15 years teaching English as a foreign language to students across Asia, Europe, South America, and Africa. Personalized online lessons for speaking, listening, reading, writing, grammar, vocabulary, IELTS, and TOEFL.",
+    "15+ years teaching English as a foreign language to students across Asia, Europe, South America, and Africa. Personalized online lessons for speaking, listening, reading, writing, grammar, vocabulary, IELTS, and TOEFL.",
   keywords: [
     "English tutor",
     "online English lessons",
